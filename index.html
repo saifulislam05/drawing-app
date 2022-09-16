@@ -1,90 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drawing app || saifulsoftwares.com</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing app || saifulsoftwares.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <section class="tools-wrapper">
+    <h1>Drawing App</h1>
     <div class="container">
-      <section class="tools-board">
-        <!-- Shapes  -->
-        <div class="row">
-          <label class="title">Shapes</label>
+      <div class="tools-board">
+
+        <!-- Shapes -->
+        <div class="row shape-wrapper">
           <ul class="options">
-            <li class="option tool" id="rectangle">
-              <img src="icons/rectangle.svg" alt="" />
-              <span>Rectangle</span>
-            </li>
             <li class="option tool" id="circle">
               <img src="icons/circle.svg" alt="" />
-              <span>Circle</span>
+            </li>
+            <li class="option tool" id="rectangle">
+              <img src="icons/rectangle.svg" alt="" />
+            </li>
+
+            <li class="option tool " id="line">
+              <img src="icons/line.svg" alt="" />
             </li>
             <li class="option tool" id="triangle">
               <img src="icons/triangle.svg" alt="" />
-              <span>Triangle</span>
-            </li>
-            <li class="option tool " id="line">
-              <img src="icons/line.svg" style="width: 18px;" alt="" />
-<span></span>
-              <span>Line</span>
             </li>
 
-            <li class="option">
-              <input type="checkbox" name="" id="fill-color" />
-              <label for="fill-color">Fill Color</label>
-            </li>
           </ul>
+          <label class="title">Shapes</label>
         </div>
 
+        <!-- fill color  -->
+        <div class="fill-color">
+          <div class="option">
+            <input type="checkbox" name="" id="fill-color" />
+            <label for="fill-color">Fill</label>
+          </div>
+        </div>
+
+
         <!-- Editing Tools  -->
-        <div class="row">
-          <label class="title">Options</label>
+        <div class="row edit-wrapper">
           <ul class="options">
             <li class="option active tool" id="brush">
               <img src="icons/brush.svg" alt="" />
-              <span>Brush</span>
             </li>
             <li class="option tool" id="eraser">
               <img src="icons/eraser.svg" alt="" />
-              <span>Eraser</span>
             </li>
-            <li class="option">
-              <input type="range" name="" id="size-slider" minlength="1" value="4"/>
-            </li>
+
           </ul>
+          <label class="title">Edit</label>
+
         </div>
-        
-        <!-- Colro Picker  -->
+        <div class="size-wrapper">
+          <div>
+            <input type="range" name="" id="size-slider" minlength="1" value="4" />
+            <span id="size-value">4</span>
+          </div>
+          <label for="">Size</label>
+        </div>
+
+
+        <!-- Color Picker  -->
         <div class="row colors">
-          <label class="title">Colors</label>
           <ul class="options">
             <li class="option"></li>
             <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option"></li>
             <li class="option"></li>
             <li class="option"></li>
             <li class="option">
               <input type="color" id="color-picker" value="#4A98F7">
             </li>
           </ul>
+          <label class="title">Colors</label>
         </div>
-   
-        <!-- Colro Picker  -->
+
+
+
+      </div>
+      <!--Buttons  -->
+      <div class="btns-wrapper">
         <div class="row buttons">
-          <button class="clear-canvas">Clear Canvas</button>
+          <img src="icons/clear-all.svg" class="clear-canvas" alt="" />
+
+
+
           <button class="save-img">Save as Image</button>
         </div>
+      </div>
+      <div class="user">
+        <div class="user-profile">
+          <p>saiful</p>
+          <img src="icons/user-profile.svg" alt="" srcset="">
 
-
-      </section>
-
-      <!-- Drawing Board  -->
-      <section class="drawing-board">
-        <canvas></canvas>
-      </section>
+        </div>
+      </div>
     </div>
-  </body>
+
+  </section>
+
+  <!-- Drawing Board  -->
+  <section class="drawing-board">
+    <div class="container">
+
+      <canvas></canvas>
+    </div>
+  </section>
+  </div>
+</body>
+
 </html>

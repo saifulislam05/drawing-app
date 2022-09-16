@@ -6,6 +6,7 @@ toolBtns = document.querySelectorAll(".tool"),
     colroPicker = document.querySelector("#color-picker"),
     clearCanvas = document.querySelector(".clear-canvas"),
     saveImg = document.querySelector(".save-img"),
+    sizeValue = document.querySelector("#size-value"),
 
 
     ctx = canvas.getContext('2d')
@@ -121,6 +122,15 @@ colorBtns.forEach(btn => {
 
     })
 });
+
+
+
+// Getting size
+
+sizeSlider.oninput = function () {
+    sizeValue.innerHTML = this.value;
+}
+
 
 colroPicker.addEventListener("change", () => {
     colroPicker.parentElement.style.background = colroPicker.value
